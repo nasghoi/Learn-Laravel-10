@@ -18,16 +18,32 @@ Route::get('/', function () {
     // return view('welcome');
 
     // select all users
-    $users = DB::select("select * from users");
+    // $users = DB::select("select * from users");
+
+    // $users = DB::table('users')->get();
+    // $users = DB::table('users')->first();
+    // $users = DB::table('users')->find(2);
+
 
     // create new user
     // $user = DB::insert("insert into users (name, email, password) values (?,?,?)", ['Ungku', 'ungku@gmail.com', 'ungkuzainab']);
     
-    // update a user
-    // $user = DB::update("update users set name = ? where id = ?", ['zainab', 2]);
+    // $user = DB::table('users')->insert([
+    //     'name' => 'Ungku',
+    //     'email' => 'ungku@gmail.com',
+    //     'password' => 'ungku10'
+    // ]);
     
     // update a user
+    // $user = DB::update("update users set name = ? where id = ?", ['zainab', 2]);
+
+    // $user = DB::table('users')->where('id', 3)->update(['name'=>'ungku']);
+    
+    // delete a user
     // $user = DB::delete("delete from users where id = ?", [2]);
+    
+    // $user = DB::table('users')->where('id', 3)->delete();
+
     dd($users);
 });
 
