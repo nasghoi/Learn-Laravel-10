@@ -25,7 +25,7 @@ Route::get('/', function () {
     // $users = DB::table('users')->first();
     // $users = DB::table('users')->find(2);
     
-    $users = User::get();
+    $users = User::all();
 
     // create new user
     // $user = DB::insert("insert into users (name, email, password) values (?,?,?)", ['Ungku', 'ungku@gmail.com', 'ungkuzainab']);
@@ -56,7 +56,8 @@ Route::get('/', function () {
     
     // $user = DB::table('users')->where('id', 3)->delete();
 
-    // $user = User::where('id', 4)->delete();
+    // $user = User::where('id', 4)
+    // $user = User->delete();
 
     dd($users);
 });
