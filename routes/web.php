@@ -25,7 +25,7 @@ Route::get('/', function () {
     // $users = DB::table('users')->first();
     // $users = DB::table('users')->find(2);
     
-    $users = User::all();
+    $users = User::find(6);
 
     // create new user
     // $user = DB::insert("insert into users (name, email, password) values (?,?,?)", ['Ungku', 'ungku@gmail.com', 'ungkuzainab']);
@@ -37,9 +37,9 @@ Route::get('/', function () {
     // ]);
 
     // $user = User::create([
-    //     'name' => 'Ungku',
-    //     'email' => 'ungku@gmail.com',
-    //     'password' => 'ungku10'
+    //     'name' => 'nasrul',
+    //     'email' => 'nasrul@gmail.com',
+    //     'password' => 'nasrul01'
     // ]);
     
     // update a user
@@ -59,7 +59,7 @@ Route::get('/', function () {
     // $user = User::where('id', 4)
     // $user = User->delete();
 
-    dd($users);
+    dd($users->name);
 });
 
 Route::get('/dashboard', function () {
