@@ -16,7 +16,7 @@ use App\Models\User;
 */
 
 Route::get('/', function () {
-    // return view('welcome');
+    return view('welcome');
 
     // select all users
     // $users = DB::select("select * from users");
@@ -25,7 +25,7 @@ Route::get('/', function () {
     // $users = DB::table('users')->first();
     // $users = DB::table('users')->find(2);
     
-    $users = User::find(6);
+    // $users = User::find(6);
 
     // create new user
     // $user = DB::insert("insert into users (name, email, password) values (?,?,?)", ['Ungku', 'ungku@gmail.com', 'ungkuzainab']);
@@ -59,7 +59,7 @@ Route::get('/', function () {
     // $user = User::where('id', 4)
     // $user = User->delete();
 
-    dd($users->name);
+    // dd($users->name);
 });
 
 Route::get('/dashboard', function () {
